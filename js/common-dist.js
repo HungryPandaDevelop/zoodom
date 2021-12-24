@@ -331,20 +331,12 @@ function changeStatePass(){
   let thisEl = $(this);
   let visibility = thisEl.data('visibility');
 
-  function hidePass(el){
-    $('.password-field').find('input').attr('type','text');
-    el.data('visibility', true);
-  }
-  function hidePass(el){
-    $('.password-field').find('input').attr('type','password');
-    el.data('visibility', false);
+  let changePass = (el,type,bool) => {
+    $('.password-field').find('input').attr('type',type);
+    el.data('visibility', bool);
   }
 
-  if(visibility){
-    showPass(thisEl);
-  }else{
-    hidePass(thisEl);
-  }
+  visibility ? changePass(thisEl,'password', !visibility) : changePass(thisEl,'text', !visibility)
 
 }
 
