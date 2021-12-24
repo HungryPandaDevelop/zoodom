@@ -1,0 +1,33 @@
+header.header-black
+	.main-grid.headline.headline--black
+		.hamburger-container.vertical-align 
+			a(href="#").hamburger-btn.element-btn(data-element="0")
+		.logo-container.vertical-align 
+			a.logo(href="#") 
+				img(src="../images/logo.svg", alt="")
+		.sigin-container.vertical-align 
+			+log-reg(0)
+
+		.city-container.vertical-align 
+			.city-body
+				em Ваш Город: 
+				a(href="#")  Москва
+		.controls-container.vertical-align
+			.controls-body
+				a(href="#").element-btn(data-element="2").loop-ico
+				a(href="#").basket-ico
+
+		hr
+	.main-grid.headerline
+		nav.nav
+			ul
+				each val in ["О нас","Каталог","Контакты","Услуги","Новости"]
+					li
+						a(href="#")
+							= val
+		.controls-container.vertical-align
+			.controls-body
+				a(href="#").btn.btn--green.element-btn(data-element="1") Заказать звонок
+				a(href="#").phone-ico
+				a(href="#").mail-ico
+.stub

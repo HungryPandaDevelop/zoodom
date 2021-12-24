@@ -1,0 +1,38 @@
+doctype html
+html
+	// head start
+	include default/head.pug 
+	// head end
+	body
+		// popup-menu start
+		include popup/menu.pug 
+		// popup-menu end
+ 
+		// popup-form start
+		include popup/backcall.pug
+		// popup-form end
+
+		// popup-search start
+		include popup/search.pug
+		// popup-search end
+
+		// header start
+		include default/header.pug
+		// header end
+		
+		// header end
+		+roofContent("Детальная страница")
+			include detail/header.pug
+			include detail/main.pug
+			include detail/recent-items.pug
+			include detail/reviews.pug
+
+ 
+			
+		// slider thumbnails end
+		
+		// footer start 
+		.stub-footer
+		include default/footer.pug
+		
+		// footer end 

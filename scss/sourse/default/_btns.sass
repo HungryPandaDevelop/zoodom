@@ -1,0 +1,106 @@
+.btn
+  text-decoration: none
+  border: 1px solid
+  padding: 10px 30px 12px
+  font: inherit
+  display: inline-block
+  border-radius: 30px
+  cursor: pointer
+  text-align: center
+  background: none
+  background-color: $whiteColor
+  border-color: $whiteColor
+  font-weight: 700
+
+  &:hover
+    text-decoration: none
+.btn--black
+  background-color: $blackColor
+  border-color: $blackColor
+  color: $whiteColor
+  &:hover
+    background: $greenColor
+    color: $whiteColor
+    border-color: $greenColor
+
+.btn--green
+  background-color: $greenColor
+  border-color: $greenColor
+  color: $whiteColor
+  &:hover
+    background-color: $blackColor
+    border-color: $blackColor
+/*pagination page start*/
+
+.pagination
+  grid-column: span 16
+  text-align: center
+  margin: 60px 0 45px
+  position: relative
+  z-index: 2
+
+  a,span
+    width: 30px
+    height: 30px
+    border-radius: 100%
+    display: inline-block
+    text-align: center
+    text-decoration: none
+    line-height: 27px
+    border: 1px solid $blackColor
+    vertical-align: middle
+    margin: 0 15px
+    &.current,
+    &:hover
+      color: $whiteColor
+      background-color: $blackColor
+
+.next.page-numbers,
+.prev.page-numbers,
+.pagination-prev,
+.pagination-next
+  background-size: 100%
+  font-size: 0
+  background-color: $blackColor
+
+.pagination-dotted
+  background-color: initial
+  color: inherit
+.prev.page-numbers,
+a.pagination-prev
+  @include icoEl(30px, 30px, "../images/controls/arrow-left-white.svg")
+  &:hover
+    background-color: $whiteColor
+    background-image: url("../images/controls/arrow-left-black.svg")
+.next.page-numbers,
+a.pagination-next
+  @include icoEl(30px, 30px, "../images/controls/arrow-right-white.svg")
+  &:hover
+    background-color: $whiteColor
+    background-image: url("../images/controls/arrow-right-black.svg")
+
+/*pagination page end*/
+
+.close-btn
+  @include icoEl(30px, 30px, "../images/controls/close-black.svg")
+  cursor: pointer
+
+.hamburger-btn
+  @include icoEl(30px, 30px, "../images/controls/hamburger-white.svg")
+
+.back-link
+  text-decoration: none
+  font-family: "bold"
+  color: $blackColor
+  font-size: $standartSize
+  i
+    @include icoEl(30px, 30px, "../images/controls/arrow-left-black.svg")
+    border-radius: 100%
+    border: 1px solid
+    margin-right: 5px
+  &:hover
+    color: $greenColor
+    i
+      background-image: url("../images/controls/arrow-left-white.svg")
+      background-color: $greenColor
+      border-color: $greenColor

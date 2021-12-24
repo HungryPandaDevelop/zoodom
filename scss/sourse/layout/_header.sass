@@ -1,0 +1,117 @@
+$headerHeight: 120px
+.stub
+	height: $headerHeight
+//(PE-- W, H, L, T, LR, TB, Z, D, P)
+header
+	@include positionElement(100%, auto, 0, auto, left, top, 2, fixed )
+	color: $whiteColor
+	background-color: $blackColor
+	box-shadow: $headerShadow
+
+	a
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+
+	.main-grid
+		height: 60px
+		position: relative
+
+	hr
+		background-color: $whiteColor
+		grid-column: span 12
+		border: 0
+		margin: 0
+		@include positionElement(100%, 1px, 0, 0, left, bottom)
+
+	nav
+		display: flex
+		grid-column: span 7
+		ul
+			display: flex
+			width: 100%
+			margin: auto 0
+			justify-content: space-between
+		li
+			display: inline-block
+nav
+
+	ul,
+	li
+		padding: 0
+		margin: 0
+		list-style: none
+
+		a
+			text-decoration: none
+			font-family: inherit
+
+.logo
+
+	position: relative
+	display: flex
+
+	a
+		margin: auto 0
+
+	img
+		width: 100%
+		max-width: 210px
+
+.hamburger-container
+	grid-column: span 1
+
+.logo-container
+	grid-column: span 2
+
+.sigin-container
+	grid-column: span 3
+	*
+		vertical-align: middle
+
+	span
+		margin: 0 10px
+
+	i
+		display: inline-block
+		width: 30px
+		height: 30px
+		position: relative
+		overflow: hidden
+		border-radius: 100%
+		margin-right: 15px
+
+	em
+		font-style: normal
+
+.city-container
+	grid-column: span 2
+
+	em
+		margin-right: 10px
+		font-style: normal
+
+.controls-container
+	grid-column: span 5
+	a
+		margin-left: 15px
+	.form
+		display: inline-block
+		input
+			width: auto
+			margin: 0
+
+	.controls-body
+		width: 100%
+		margin: auto 0 auto auto
+		text-align: right
+
+	.loop-btn,
+	.basket-btn
+		margin-left: 30px
+
+	input
+		color: $whiteColor
+
+		&::placeholder
+			color: inherit

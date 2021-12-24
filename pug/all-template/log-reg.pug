@@ -1,0 +1,18 @@
+mixin log-reg(logReg)
+  .sigin-body
+    if logReg == 0
+      a(href="#")
+        .login-ico
+        span Войти
+      span /
+      a(href="#") Регистрация
+    else
+      a(href="#") 
+        i.img-cover 
+          img(src="../images/temp/avatar-1.jpg", alt="")
+        em Loren Smith
+        span /
+        a(href="#")
+          .logout-ico
+          span Выйти
+            

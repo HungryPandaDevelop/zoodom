@@ -1,0 +1,16 @@
+head
+	meta(
+		charset="UTF-8"
+	)
+	meta(
+		name="viewport"
+		content="width=device-width, initial-scale=1.0"
+	)
+
+	each val in ["../css/owl.carousel.css","../css/style.css"]
+		link(href = val	type="text/css"	rel="stylesheet")
+
+	each val in ["../js/sourse/other-js/jquery-3.6.0.min.js","../js/sourse/other-js/jquery.mask.js","../js/sourse/other-js/owl.carousel.js","../js/sourse/other-js/owl.carousel2.thumbs.js","../js/common-dist.js"]
+		script(	src = val defer)
+
+	include ../all-template/connect-template.pug  

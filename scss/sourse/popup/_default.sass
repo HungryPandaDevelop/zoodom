@@ -1,0 +1,36 @@
+
+.popup
+  @include positionElement(100%, 100%, 0, 0, left, top, 3, fixed, flex)
+  .popup-overlay
+    @include positionElement(100%, 100%, 0, 0)
+    background-color: $blackColor
+    opacity: 0.6
+  a
+    &:hover
+      color: $blackColor
+  .close-btn
+    position: absolute
+    right: 0
+    top: 0
+    margin: 15px
+
+.popup-container
+  position: relative
+  background-color: $grayColorSecond
+  max-width: 600px
+  width: 100%
+  margin: auto
+  padding: 30px
+  border: 1px solid $blackColor
+
+  h2, h3
+    margin: 0 0 15px
+
+.element-show
+  transition: ease-out 0.25s
+  opacity: 0
+  visibility: hidden
+
+  &.show
+    opacity: 1
+    visibility: visible

@@ -1,0 +1,79 @@
+
+$gridCount: 12
+$indent: 30px
+$maxWidth: 1680px
+$gap: 15px
+$burgerDesctop: 1
+
+.main-grid
+  display: grid
+  grid-template-columns: repeat($gridCount, 1fr)
+  grid-column-gap: $gap
+  padding: 0 $indent
+  max-width: $maxWidth
+  margin: 0 auto
+.form-grid
+  display: grid
+  grid-template-columns: repeat($gridCount, 1fr)
+  grid-column-gap: $gap
+.catalog-grid
+  grid-gap: $gap
+.main-full
+  padding: 0 $indent
+  max-width: $maxWidth
+  margin: 0 auto
+
+.item-col-quarter
+  grid-column: span 3
+.item-col-third
+  grid-column: span 4
+.item-col-half
+  grid-column: span 6
+.item-col-full
+  grid-column: span 12
+
+section
+  padding: 120px 0 60px
+
+  h2
+    font-size: $largeSize
+    margin: 0 0 60px
+  .btn-container
+    padding: 30px 0 15px
+    text-align: center
+
+.breadcrumbs
+  border-bottom: 1px solid $grayColor
+  padding: 15px 0
+  a
+    text-decoration: none
+    color: $blackColor
+    &:hover
+      text-decoration: underline
+  span
+    margin: 0 5px
+
+.content
+  min-height: calc(100vh - 450px)
+  h1
+    padding: 30px 0
+
+@if $burgerDesctop == 1
+  .hamburger-container
+    display: none
+
+  @media screen and (max-width: 768px)
+    .hamburger-container
+      display: block
+  @media screen and (max-width: 414px)
+    .hamburger-container
+      display: block
+
+.show-all-images
+  min-height: 500px
+  background-color: $grayColor
+  img
+    width: 30px
+    height: 30px
+
+/*detail end*/

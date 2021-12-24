@@ -1,0 +1,46 @@
+doctype html
+html
+	// head start
+	include default/head.pug 
+	// head end
+	body
+		// popup-menu start
+		include popup/menu.pug 
+		// popup-menu end
+ 
+		// popup-form start
+		include popup/backcall.pug
+		// popup-form end
+
+		// popup-search start
+		include popup/search.pug
+		// popup-search end
+
+		// header start
+		include default/header.pug
+		// header end
+
+
+		// main start
+		include home/main_home.pug
+		// main end
+
+		// main page content start
+		
+		- var textStumb = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi cum tenetur odio repudiandae ipsam libero dolor exercitationem laudantium quam saepe, dicta consequuntur vitae ex architecto illum officia dignissimos molestias ea!"
+
+		include home/product_section.pug
+		include home/news_section.pug
+		include home/feedback_home.pug
+		include home/contacts_home.pug
+
+		// main page content end
+
+
+
+		// footer start 
+
+		.stub-footer
+		include default/footer.pug
+		
+		// footer end

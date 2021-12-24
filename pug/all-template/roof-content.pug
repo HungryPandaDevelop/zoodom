@@ -1,0 +1,13 @@
+mixin roofContent(topic)
+  .main-full
+    .breadcrumbs
+      a(href="#") Главная
+      span /
+      a(href="#") Категория
+      span /
+      span= topic
+  .content
+    .main-full
+      h1= topic
+    if block
+      block

@@ -1,0 +1,85 @@
+doctype html
+html
+	// head start
+	include default/head.pug 
+	// head end
+	body
+		// popup-menu start
+		include popup/menu.pug 
+		// popup-menu end
+
+		// popup-form start
+		include popup/backcall.pug
+		// popup-form end
+
+		// popup-search start
+		include popup/search.pug
+		// popup-search end
+
+		// header start
+		include default/header.pug
+		.stub
+		// header end
+
+
+		// main start
+		include home/main_home.pug
+		// main end
+
+		// main page content start
+		- var textStumb = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi cum tenetur odio repudiandae ipsam libero dolor exercitationem laudantium quam saepe, dicta consequuntur vitae ex architecto illum officia dignissimos molestias ea!"
+		section
+			.main-full
+				h2 Новая секция
+			.main-grid
+				-for (var i=0; i < 4; i++)
+					+cardItemDefault("quarter","Brit Care - Hight Chicken","../images/temp/product-1.jpg","1000","2000",textStumb,"btn btn--black","Купить")
+				-for (var i=0; i < 4; i++)
+					+itemDefault("news", "quarter","New Item","../images/temp/1.jpg","11.11.11","Lodio quae atqu send to me Lodio quae atqu send to me Lodio quae atqu send to me Lodio quae atqu send to me Lodio quae atqu send to me...","btn btn--black","Подробнее")
+				-for (var i=0; i < 3; i++)
+					+itemDefault("news","third","New Item","../images/temp/1.jpg","11.11.11","Lodio quae atqu send to me ...","btn btn--black","Подробнее")
+				-for (var i=0; i < 2; i++)
+					+itemDefault("news","half","New Item","../images/temp/1.jpg","11.11.11","Lodio quae atqu send to me...","btn btn--black","Подробнее")
+		section  
+			.main-full
+				h2 Обратная связь
+				- var standartField = [["text","Фио","form--col__three"],["phone","form--col__three"],["email","Email","form--col__three"],["textarea","Ваше сообщение","form--col__full"]];
+				- var personalDataField = [["checkbox","Я даю свое согласие на обработку персональных данных","form--col__full"]]
+				- var fileField = [["file",1,"Выберете файл","Загрузите фото лицензии/сертификата на продукцию (для фото - формат: .jpg, .png; размер - не более 500 кб)","image/jpeg,image/png,image/gif","form--col__full"]]; 
+			
+				- var selectField = [["select","Выберете пункт меню", ["lorem","ipusm","scientist", "blog", "red"],"form--col__full"]];
+				- var checkboxField = [["checkbox","one","form--col__three"],["checkbox","two","form--col__three"],["checkbox","three","form--col__three"]];
+				- var radioField = [["radio","new","one","form--col__three"],["radio","new","two","form--col__three"],["radio","new","three","form--col__three"]];
+				- var btnField = [["submit","btn btn-send","Отправить"]];
+
+				- var feedback = [["text","Фио","form--col__three require"],["phone","form--col__three require"],["email","Email","form--col__three"],["submit","btn btn-send","Отправить"]];
+
+
+
+			//- +form(standartField)
+			//- br
+			//- +form(personalDataField)
+			//- br
+			//- +form(fileField)
+			//- br
+			//- +form(selectField)
+			//- br
+			//- +form(checkboxField)
+			//- br
+			//- +form(radioField)
+			//- br
+			//- +form(btnField)
+			//- br
+			+form(feedback)
+			
+
+		include home/contacts_home.pug
+		// main page content end
+
+
+
+		// footer start 
+		.stub-footer
+		include default/footer.pug
+		
+		// footer end

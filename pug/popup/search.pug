@@ -1,0 +1,13 @@
++modal-template(2,'Поиск по сайту',false,0,'popup__search')
+	- var searchField = [["text","Введите поисковой запрос ...","form--col__full search-field"],["submit","btn btn-send btn--black","Поиск"]];
+	+form(searchField)
+	.popup__search__results
+		h2 Реузльтаты
+		.form-grid
+			-for(var x = 0; x<4 ;x++)
+				.popup__search__results-item
+					h3 Category 
+					ul.ln
+						-for(var a = 0; a<5 ;a++)
+							li
+								a(href="#") link 1 

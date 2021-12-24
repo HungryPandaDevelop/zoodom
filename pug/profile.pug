@@ -1,0 +1,58 @@
+doctype html
+html
+	// head start
+	include default/head.pug 
+	// head end
+	body
+		// popup-menu start
+		include popup/menu.pug 
+		// popup-menu end
+ 
+		// popup-form start
+		include popup/backcall.pug
+		// popup-form end
+
+		// popup-search start
+		include popup/search.pug
+		// popup-search end
+
+		// header start
+		include default/header.pug
+		// header end
+		
+		// header end
+		+roofContent("Профиль")
+			.page.main-full.profile
+				.profile-item 
+					h2 
+						b 01. 
+						span Выберите основной вид вашей деятельности
+					- var checkboxField = [["checkbox","Дистрибьютор","form--col__three"],["checkbox","Питомник","form--col__three"],["checkbox","Приют","form--col__three"],["checkbox","Ветклиника","form--col__three"],["checkbox","Салон","form--col__three"]];
+					+form(checkboxField)
+				.profile-item 
+					h2 
+						b 02. 
+						span Основная информация
+					- var profile = [["text","Наименование компании","form--col__three require"],["phone","form--col__three require"],["email","Email *","form--col__three require"],];
+					+form(profile)
+				.profile-item 
+					h2 
+						b 03. 
+						span Фото профиля
+					- var photoProfile = [["file",0,"Выберете файл","","form--col__full"]]; 
+					+form(photoProfile)
+				.profile-item 
+					h2
+						b 04. 
+						span Пароль
+					- var profile = [["password","Пароль","form--col__three require"]];
+					+form(profile)
+
+			
+		// slider thumbnails end
+		
+		// footer start 
+		.stub-footer
+		include default/footer.pug
+		
+		// footer end 

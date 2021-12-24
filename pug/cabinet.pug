@@ -1,0 +1,41 @@
+doctype html
+html
+	// head start
+	include default/head.pug 
+	// head end
+	body
+		// popup-menu start
+		include popup/menu.pug 
+		// popup-menu end
+ 
+		// popup-form start
+		include popup/backcall.pug
+		// popup-form end
+
+		// popup-search start
+		include popup/search.pug
+		// popup-search end
+
+		// header start
+		include default/header.pug
+		// header end
+		
+		// header end
+		+roofContent("Просто страница")
+			.page.main-full
+				h3 Создать
+				- var addNewItem = [["text","Заголовок","form--col__full require"],["text","Содержание","form--col__full require"],["submit","btn btn--black btn-send","Добавить"]];
+				+form(addNewItem)
+				h3 Список
+				.user-item
+					h2 Lor
+					div 
+						.btn.btn--black Редактировать
+						.btn.btn--green.user-item--delete Удалить
+		// slider thumbnails end
+		
+		// footer start 
+		.stub-footer
+		include default/footer.pug
+		
+		// footer end 

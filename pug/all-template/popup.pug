@@ -1,0 +1,27 @@
+mixin modal-template(num, topicModal, textModal, visibility, addClass)
+  if(visibility)
+    .popup.element-show.show(data-element= num  class= addClass)
+      .popup-overlay
+      .popup-container 
+        .close-btn.close-js
+        .main-full
+          if topicModal
+            h2= topicModal
+          if textModal
+            .lead
+              = textModal
+        if block
+          block
+  else
+    .popup.element-show(data-element=num class=addClass)
+      .popup-overlay
+      .popup-container
+        .close-btn.close-js
+        .main-full
+          if topicModal
+            h2= topicModal
+          if textModal
+            .lead
+              = textModal
+        if block
+          block

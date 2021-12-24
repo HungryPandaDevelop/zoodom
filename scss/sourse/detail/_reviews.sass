@@ -1,0 +1,70 @@
+.reviews-list,
+.reviews-form
+  grid-column: span 6
+.reviews-list
+  .navigation
+    display: flex
+    justify-content: space-between
+    a
+      text-decoration: none
+      &:hover
+        color: $greenColor
+.reviews-item
+  border: 1px solid $blackColor
+  padding: 15px
+  margin: 0 0 30px
+.reviews-head
+  border-bottom: 1px solid $blackColor
+  padding-bottom: 15px
+  margin-block-end: 15px
+.reviews-head-item
+  display: inline-block
+.reviews-grade
+  border: 1px solid $blackColor
+  border-radius: 100%
+  width: 30px
+  height: 30px
+  line-height: 28px
+  text-align: center
+  margin-left: 60px
+.reviews-name
+  font-size: $mediumSize
+  font-family: "bold"
+  color: $blackColor
+  margin-right: 30px
+
+.reviews-img
+  width: 60px
+  height: 60px
+  border-radius: 100%
+  overflow: hidden
+  position: relative
+  display: inline-block
+  margin-right: 30px
+  vertical-align: top
+.reviews-text
+  width: calc( 100% - 150px )
+  display: inline-block
+  vertical-align: top
+
+.reviews-stars
+  margin: 0 0 15px
+  i
+    cursor: pointer
+    &:hover
+      background-image: url("../images/icons/star-green.svg")
+  h3,
+  .reviews-container
+    display: inline-block
+    vertical-align: middle
+  h3
+    margin-right: 15px
+
+.reviews-container.selected
+  i
+    &.active,
+    &:not(.active)
+      background-image: url('../images/icons/star-green.svg')
+
+    &.active~i
+      background-image: url('../images/icons/star-gray.svg')

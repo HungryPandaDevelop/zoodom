@@ -1,0 +1,40 @@
+doctype html
+html
+	// head start
+	include default/head.pug 
+	// head end
+	body
+		// popup-menu start
+		include popup/menu.pug 
+		// popup-menu end
+ 
+		// popup-form start
+		include popup/backcall.pug
+		// popup-form end
+
+		// popup-search start
+		include popup/search.pug
+		// popup-search end
+
+		// header start
+		include default/header.pug
+		// header end
+		
+		// header end
+		+roofContent("Просто страница")
+			.page.main-grid
+				.page-img 
+					img(src="../images/temp/1.jpg", alt="")
+				.page-content
+					h2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vero pariatur sunt 
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat quas quasi quam dolorum praesentium? Ipsa, nam est rem, nisi minus esse reiciendis, quae aperiam molestias officia impedit doloremque sit.
+					p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi nam officiis in excepturi, nisi unde aliquid rem hic aliquam a illum ducimus ea ratione dignissimos sed ex rerum voluptatem iure!
+
+			
+		// slider thumbnails end
+		
+		// footer start 
+		.stub-footer
+		include default/footer.pug
+		
+		// footer end 

@@ -1,0 +1,10 @@
+.outer
+  #big.owl-carousel.owl-theme
+    - for (var x = 0; x < 5; x++)
+      div
+        img(src="../images/temp/1.jpg", alt="")
+  #thumbs.owl-carousel.owl-theme(data-slider-id="1")
+    - for (var x = 0; x < 5; x++)
+      .owl-thumb-item
+        .thumb-item
+          img(src="../images/temp/1.jpg", alt="")

@@ -1,0 +1,18 @@
+.detail-main
+  .main-grid
+    .detail-slider
+      .owl-detail-main.owl-carousel
+        each val,index in ["","",""]
+          .slider-item.flex-align
+            .img-cover
+              img(src="../images/temp/"+(index+1)+".jpg", alt="")
+    .detail-about
+      .detail-description
+        h2 Detail page 
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Id impedit animi rerum praesentium commodi molestiae quia laudantium deserunt fugiat obcaecati aliquam voluptatem, similique alias eius, cumque, architecto non delectus. Rerum?
+      .detail-links
+        .tags
+          a(href="#") News 
+          a(href="#") Last 
+          a(href="#") Custom 
+        +social("v","i","tw")

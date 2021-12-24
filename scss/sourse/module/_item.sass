@@ -1,0 +1,32 @@
+.item
+  text-decoration: none
+  padding: 30px
+  border: 1px solid
+  a
+    text-decoration: none
+
+  h3
+    font-size: $mediumSize
+    margin: 0 0 15px
+    &:hover
+      color: $greenColor
+  .item__img
+    margin: 0 0 15px
+    padding-bottom: 60%
+    height: auto
+
+    transition: ease-out 0.5s
+    img
+      @include positionElement(100%,100%,0,0)
+
+    &:hover
+      transform: scale(1.05)
+  .item__date
+    margin: 0 0 15px
+  .item__description
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    line-clamp: 2
+    margin: 0 0 15px

@@ -1,0 +1,5 @@
+section  
+  .main-full
+    h2 Обратная связь
+    - var feedback = [["text","Фио","form--col__three require"],["phone","form--col__three require"],["email","Email","form--col__three"],["textarea","Ваше сообщение","form--col__full"],["checkbox","Я даю свое согласие на обработку персональных данных","form--col__full"],["submit","btn btn-send btn--black","form--col__full","Отправить"]];
+    +form(feedback)

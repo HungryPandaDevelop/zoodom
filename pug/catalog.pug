@@ -1,0 +1,35 @@
+doctype html
+html
+	// head start
+	include default/head.pug 
+	// head end
+	body
+		// popup-menu start
+		include popup/menu.pug 
+		// popup-menu end
+ 
+		// popup-form start
+		include popup/backcall.pug
+		// popup-form end
+
+		// popup-search start
+		include popup/search.pug
+		// popup-search end
+
+		// header start
+		include default/header.pug
+		// header end
+		
+		// header end
+		+roofContent("Cписковая страница")
+			-var itemCol = 4
+			.main-grid.catalog-grid
+				-for (var i=0; i < 12; i++)
+					+itemDefault("news", itemCol,"New Item","../images/temp/1.jpg","11.11.11","Lodio quae atqu send to me Lodio quae atqu send to me Lodio quae atqu send to me Lodio quae atqu send to me Lodio quae atqu send to me...","btn btn--black","Подробнее")
+			.main-full
+				+pagination()
+		// footer start 
+		.stub-footer
+		include default/footer.pug
+		
+		// footer end 

@@ -1,0 +1,36 @@
+
+mixin form(allField)
+  form.form.form-grid
+    - for (var x = 0; x < allField.length; x++)
+      if allField[x][0] =="text"
+        input(type="text" placeholder=allField[x][1] class='input-decorate '+allField[x][2])
+      if allField[x][0] =="phone"
+        input.phone-mask(type="text" placeholder="+7 (___) ___ - __ - __" class='input-decorate '+allField[x][1])
+      if allField[x][0] =="email"
+        input(type="email" placeholder=allField[x][1] class='input-decorate check-mail '+allField[x][2])
+      if allField[x][0] =="password"
+        .password-field(class='password-origin '+allField[x][2])
+          input(type="password" placeholder=allField[x][1] class='input-decorate')
+          i.password-ico(data-visibility="false")
+      if allField[x][0] =="textarea"
+        textarea(placeholder=allField[x][1] class='input-decorate '+allField[x][2])
+      if allField[x][0] =="checkbox"
+        .checkbox(class=allField[x][2])
+          label= allField[x][1]
+            input(type="checkbox" checked)
+            span
+      if allField[x][0] =="radio"
+        .radio(class=allField[x][3])
+          label= allField[x][2]
+            input(type="radio" name=allField[x][1])
+            span
+      if allField[x][0] =="file"
+        .input-file-container(class=name=allField[x][5])
+          input.input-file(type="file" data-multy=allField[x][1] data-textchoise=allField[x][2] data-hint=allField[x][3] accept="image/jpeg,image/png,image/gif"  )
+      if allField[x][0] =="select"
+        select.style-select(data-text=allField[x][1] data-class=allField[x][3])
+          each val in allField[x][2]
+            option= val
+      if allField[x][0] =="submit"
+        .form-btn-container(class=allField[x][2])
+          input(type="submit" class=allField[x][1]  value=allField[x][3])

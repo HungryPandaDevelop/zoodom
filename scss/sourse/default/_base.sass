@@ -1,0 +1,81 @@
+*
+	box-sizing: border-box
+
+body,
+html
+	font-family: 'Merriweather', serif
+	color: $grayColor
+	font-size: $standartSize
+	min-width: 320px
+	min-height: 640px
+	max-width: 1920px
+	margin: 0 auto
+	padding: 0
+	position: relative
+
+a
+	color: inherit
+	display: inline-block
+
+	&:hover
+
+.ln,
+.ln li
+	padding: 0
+	margin: 0
+	list-style: none
+
+.custom-disk
+	li
+		padding-left: 15px
+		position: relative
+
+		&:before
+			content: ""
+			@include positionElement(4px, 4px, 0, 8px)
+			background: $blackColor
+			border-radius: 100%
+
+.flex-align
+	display: flex
+	align-items: center
+	justify-content: center
+
+.vertical-align
+	display: flex
+	*
+		margin: auto 0
+
+.img-cover
+	position: relative
+	width: 100%
+	height: 100%
+	background-size: cover
+	background-position: center top
+	background-repeat: no-repeat
+
+	img
+		visibility: hidden
+		object-fit: cover
+		@include positionElement(100%, 100%, 0, 0)
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	margin: 0
+	padding: 0
+	line-height: 1
+	font-weight: 700
+	color: $violetColor
+
+b,
+strong
+	font-weight: 700
+
+h1
+	@include changeFontSize($mediaLargeSize)
+h2
+	@include changeFontSize($mediaMediumSize)

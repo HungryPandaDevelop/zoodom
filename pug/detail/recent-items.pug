@@ -1,0 +1,7 @@
+section
+	.main-full 
+		h2 Последние новости
+	.main-grid 
+		-var itemCol = 4
+		-for (var i=0; i < itemCol; i++)
+			+itemDefault("news", itemCol,"New Item","../images/temp/1.jpg","11.11.11","Lodio quae atqu send to me Lodio quae atqu send to me Lodio quae atqu send to me Lodio quae atqu send to me Lodio quae atqu send to me...","btn btn--black","Подробнее")

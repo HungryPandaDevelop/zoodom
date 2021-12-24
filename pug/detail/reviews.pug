@@ -1,0 +1,19 @@
+section
+  .main-full
+    h2 Отзывы
+  .main-grid
+    .reviews-list
+      +reviewsItem("Alex But","10/10/10") 
+      +reviewsItem("Nanci Dri","12/12/22") 
+
+    .reviews-form
+      .reviews-stars
+        h3 Оценка:
+        .reviews-container
+          i.star-ico.star-ico--gray
+          i.star-ico.star-ico--gray
+          i.star-ico.star-ico--gray
+          i.star-ico.star-ico--gray
+          i.star-ico.star-ico--gray
+      - var reviewsField = [["text","Имя","form--col__full"],["textarea","Ваш отзыв","form--col__full"],["submit","btn btn-send btn--green","Заказать звонок"]];
+      +form(reviewsField)
