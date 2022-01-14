@@ -1,5 +1,5 @@
 - var authField = [["text","Имя","form--col__full require"],["email","Email","form--col__full require"],["password","Пароль","form--col__full require"],["submit","btn btn-send","Отправить"],["checkbox","Я даю свое согласие на обработку персональных данных","form--col__full"]];
-- var loginField = [["email","Email","form--col__full require"],["password","Пароль","form--col__full require"],["submit","btn btn-send","Войти"]];
+- var loginField = [["email","Email","col-4"],["password","Пароль","col-4"],["submit","btn btn-send btn--green","Войти"]];
 - var forgotField = [["email","Email","form--col__full require"],["submit","btn btn-send","Восстановить пароль"]];
 mixin auth()
-	+form(forgotField)
+	+form(loginField)

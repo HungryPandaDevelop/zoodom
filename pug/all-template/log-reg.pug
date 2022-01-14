@@ -2,7 +2,7 @@ mixin log-reg(logReg)
   .sigin-body
     if logReg == 0
       a(href="#")
-        .login-ico
+        .login-ico--color
         span Войти
       span /
       a(href="#") Регистрация
@@ -11,8 +11,7 @@ mixin log-reg(logReg)
         i.img-cover 
           img(src="../images/temp/avatar-1.jpg", alt="")
         em Loren Smith
-        span /
-        a(href="#")
-          .logout-ico
-          span Выйти
-            
+      span /
+      a(href="#")
+        .logout-ico--color
+        span Выйти

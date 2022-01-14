@@ -1,0 +1,81 @@
+.cabinet-content
+  h1
+    margin: 0 0 60px
+  .main-grid
+    padding: 0
+
+  .cabinet-content
+  .cabinet-line
+    margin: 0 0 30px
+
+  .acf-label,
+  .cabinet-num,
+  .cabinet-label
+    font-size: $mediumSize
+    color: $blackColor
+    display: inline-block
+    font-weight: bold
+    margin-bottom: 30px
+
+  .cabinet-num
+    width: 47px
+
+  .cabinet-label
+    width: calc(100% - 51px)
+
+  .cabinet-field
+    margin-left: 51px
+
+  .acf-field-username .acf-input,
+  .input-decorate,
+  .input-decorate[type="text"],
+  .input-decorate[type="email"],
+  .input-decorate[type="password"]
+    padding: 20px 30px
+    border-radius: 30px
+    border: 0
+    border: 1px solid
+    font: inherit
+    resize: none
+    width: 100%
+    background: none
+    margin: 0 0 15px
+    transition: ease-out 0.5s
+  textarea.input-decorate
+    resize: none
+  .acf-field-image
+    z-index: 1
+  .acf-image-uploader-aspect-ratio-crop .acf-icon
+    width: 30px
+    height: 30px
+    background-color: $grayColor
+
+  .fea-delete-button,
+  .edit-password,
+  .editing_password .cancel-edit,
+  .fea-submit-button
+    text-decoration: none
+    border: 1px solid
+    padding: 10px 30px 12px
+    font: inherit
+    border-radius: 30px
+    cursor: pointer
+    text-align: center
+    transition: ease-out 0.5s
+
+    background: linear-gradient(90deg, $pinkColor 0%, $pinkColorSecond 50%, $pinkColor 100%)
+    box-shadow: $pinkShadow
+    border-color: $pinkColor
+    color: $whiteColor
+
+    background-size: 200% 100%
+    background-position: 0% 0
+    &:hover
+      background-position: 100% 0
+
+  .fea-delete-button
+    background: $violetColor
+    border-color: $violetColor
+    &:hover
+      background: $pinkColor
+      border-color: $pinkColor

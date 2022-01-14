@@ -4,9 +4,9 @@ $headerHeight: 120px
 //(PE-- W, H, L, T, LR, TB, Z, D, P)
 header
 	@include positionElement(100%, auto, 0, auto, left, top, 2, fixed )
-	color: $whiteColor
-	background-color: $blackColor
-	box-shadow: $headerShadow
+	color: $violetColor
+	background: $lightPinkGradient
+	box-shadow: $lightPinkShadow
 
 	a
 		text-decoration: none
@@ -18,15 +18,15 @@ header
 		position: relative
 
 	hr
-		background-color: $whiteColor
-		grid-column: span 12
+		background-color: $violetColor
+
 		border: 0
 		margin: 0
 		@include positionElement(100%, 1px, 0, 0, left, bottom)
 
 	nav
 		display: flex
-		grid-column: span 7
+
 		ul
 			display: flex
 			width: 100%
@@ -47,25 +47,26 @@ nav
 			font-family: inherit
 
 .logo
-
 	position: relative
-	display: flex
 
 	a
 		margin: auto 0
 
 	img
 		width: 100%
-		max-width: 210px
+		max-width: 36px
+.logo-text
+	text-transform: uppercase
+	color: $pinkColor
+	font-family: bold
+	font-size: $standartSizePlus
+	margin-left: 15px
 
 .hamburger-container
-	grid-column: span 1
 
 .logo-container
-	grid-column: span 2
 
 .sigin-container
-	grid-column: span 3
 	*
 		vertical-align: middle
 
@@ -83,16 +84,18 @@ nav
 
 	em
 		font-style: normal
-
+	a.active,
+	a:hover
+		text-decoration: none
+		color: $pinkColor
 .city-container
-	grid-column: span 2
 
 	em
 		margin-right: 10px
 		font-style: normal
 
 .controls-container
-	grid-column: span 5
+
 	a
 		margin-left: 15px
 	.form

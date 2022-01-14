@@ -1,6 +1,6 @@
 
 mixin form(allField)
-  form.form.form-grid
+  form.form.main-grid
     - for (var x = 0; x < allField.length; x++)
       if allField[x][0] =="text"
         input(type="text" placeholder=allField[x][1] class='input-decorate '+allField[x][2])
@@ -9,9 +9,9 @@ mixin form(allField)
       if allField[x][0] =="email"
         input(type="email" placeholder=allField[x][1] class='input-decorate check-mail '+allField[x][2])
       if allField[x][0] =="password"
-        .password-field(class='password-origin '+allField[x][2])
+        .password-field(class=allField[x][2] )
           input(type="password" placeholder=allField[x][1] class='input-decorate')
-          i.password-ico(data-visibility="false")
+          i.view-ico(data-visibility="false")
       if allField[x][0] =="textarea"
         textarea(placeholder=allField[x][1] class='input-decorate '+allField[x][2])
       if allField[x][0] =="checkbox"

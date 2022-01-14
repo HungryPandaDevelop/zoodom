@@ -21,17 +21,54 @@ html
 		// header end
 		
 		// header end
-		+roofContent("Просто страница")
-			.page.main-full
-				h3 Создать
-				- var addNewItem = [["text","Заголовок","form--col__full require"],["text","Содержание","form--col__full require"],["submit","btn btn--black btn-send","Добавить"]];
-				+form(addNewItem)
-				h3 Список
-				.user-item
-					h2 Lor
-					div 
-						.btn.btn--black Редактировать
-						.btn.btn--green.user-item--delete Удалить
+		//+roofContent("Личный профиль")
+		.roofstub
+		.page.main-grid.cabinet
+			.cabinet-sidebar.col-3
+				.cabinet__user
+					.user-img
+						span
+							img(src="../images/icons/avatar-black.svg", alt="")
+					.user-name Новый пользователь
+					.user-type Питомник
+				.cabinet-nav
+					h3
+						nav.ln
+							li 
+								a.active(href="#") Личный профиль
+							li 
+								a(href="#") Основные данные ?
+							li 
+								a(href="#") Объявления
+			.cabinet-delimetr.col-1
+				hr
+			.cabinet-content.col-6
+				h1 Личный профиль
+				.cabinet-line
+					.cabinet-num
+						|1.
+					.cabinet-label
+						|Ваш логин
+					.cabinet-field
+						- var addNewItem = [["text","Логин","col-12 require"]];
+						+form(addNewItem)
+				.cabinet-line
+					.cabinet-num
+						|2.
+					.cabinet-label
+						|Тукущий пароль
+					.cabinet-field
+						- var addNewItem = [["password","Пароль","col-12 require"]];
+						+form(addNewItem)
+				.cabinet-line
+					.cabinet-num
+						|3.
+					.cabinet-label
+						|Контактные данные
+					.cabinet-field
+						- var feedback = [["text","Фио","col-12 require"],["phone","col-12 require"],["email","Email","col-12"],["scype","Фио","col-12 require"],["text","whatsapp","col-12 require"],["submit","btn btn-send btn--black","col-12","Сохранить"]];
+						+form(feedback)
+
 		// slider thumbnails end
 		
 		// footer start 

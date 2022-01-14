@@ -198,44 +198,14 @@ $('.reviews-stars').on('click','i',function(){
 }); 
 
 
+
 let userItem = '.user-item';
 
 $('.page').on('click',userItem+' .item-delete',deleteItem); 
 $('.page').on('click',userItem+' .item-update',updateItem); 
 $('.item-add').on('click',addItem); 
 
-$('.btn-user').on('click',userEdit); 
-// /wp-json/wp/v2/users
-function userEdit(e){
-  e.preventDefault();
-  console.log('user edit');
-
-  let infoFromForm = {
-    'first_name': 'illon',
-    'acf': {
-      'name_company': "testimonial"
-    },
-    'password': 'test'
-  }
-
-  $.ajax({
-    beforeSend: (xhr)=>{
-      xhr.setRequestHeader('X-WP-Nonce',getData.nonce);
-    },
-    url: getData.root_url+'/wp-json/wp/v2/users/2',
-    data: infoFromForm,
-    type: 'POST',
-    success: (response)=>{
-      console.log('response',response);
-      
-    },
-    error: (response)=>{
-      console.log('error',response);
-      
-    }
-  });
-}
-
+  
 function deleteItem(){
   let thisItem = $(this).parents(userItem);
 
@@ -248,7 +218,7 @@ function deleteItem(){
     url: getData.root_url+'/wp-json/wp/v2/news/'+idItem,
     type: 'DELETE',
     success: (response)=>{
-
+      
       thisItem.remove();
     },
     error: (response)=>{
@@ -265,7 +235,7 @@ function updateItem(){
 
   let infoFromForm = {
     'title': thisItem.find('.item-title').val(),
-    'content': thisItem.find('.item-content').val()
+    'content': thisItem.find('.item-content').val(),
   }
   console.log(infoFromForm);
 
@@ -294,6 +264,7 @@ function addItem(e){
   let infoFromForm = {
     'title': thisItem.find('.add-item-title').val(),
     'content': thisItem.find('.add-item-content').val(),
+    'img': thisItem.find('.file-input').val(),
     'status': 'publish'
   }
   console.log('add',infoFromForm);
@@ -327,18 +298,94 @@ function addItem(e){
   });
 }
 $('.password-field').on('click','i',changeStatePass);
+let visibility = true;
 function changeStatePass(){
+
+  console.log(visibility);
+
   let thisEl = $(this);
-  let visibility = thisEl.data('visibility');
 
   let changePass = (el,type,bool) => {
     $('.password-field').find('input').attr('type',type);
-    el.data('visibility', bool);
+    el.attr('data-visibility', bool);
+    visibility = !visibility;
   }
 
-  visibility ? changePass(thisEl,'password', !visibility) : changePass(thisEl,'text', !visibility)
+  visibility ? changePass(thisEl,'text', visibility) : changePass(thisEl,'password', visibility)
 
 }
+
+
+// $('.btn-user').on('click',userEdit); 
+// /wp-json/wp/v2/users
+// function userEdit(e){
+//   e.preventDefault();
+//   console.log('user edit 2');
+
+//   let infoFromForm = {
+//     'first_name': 'illon',
+//     'acf': {
+//       'name_company': "testimonial"
+//     },
+//     'password': 'test'
+//   }  
+
+//   $.ajax({
+//     beforeSend: (xhr)=>{
+//       xhr.setRequestHeader('X-WP-Nonce',getData.nonce);
+//     },
+//     url: getData.root_url+'/wp-json/wp/v2/users/2',
+//     data: infoFromForm,
+//     type: 'POST',
+//     success: (response)=>{
+//       console.log('response',response);
+      
+//     },
+//     error: (response)=>{
+//       console.log('error',response);
+      
+//     }
+//   });
+// }
+
+let mediaEdit = (e)=>{  
+  e.preventDefault();
+  let file = $('body').find('.cropped')[0].files[0];
+  let caption =  $('.cropped').find('.cropped').attr('src');
+  console.log('media click val',file);
+  
+  let formdata = new FormData();
+
+  formdata.append('file',file);
+  formdata.append('title','file 371');
+  formdata.append('title',caption);
+
+  $.ajax({
+      url: getData.root_url+'/wp-json/wp/v2/media/',
+      method: 'POST',
+      processData: false,
+			contentType: false,
+        beforeSend: (xhr)=>{
+          xhr.setRequestHeader('X-WP-Nonce',getData.nonce);
+        },
+        data: formdata,
+        success: (response)=>{
+          console.log('response',response);
+          $('.show-file').append('<img src="'+response.source_url+'"/>')
+        },
+        error: (response)=>{
+          console.log('error',response);
+          
+        }
+      });
+  
+}
+$('.btn-user').on('click',mediaEdit); 
+
+
+
+console.log('media home');
+
 
 
 //# sourceMappingURL=common-dist.js.map

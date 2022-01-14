@@ -37,13 +37,25 @@
   background-size: $s
   background-image: url($img)
 
-$points: 1920,1680,1440,1280,1024,768,414
+$points: 1920,1680,1440,1280,1024,768,500
 
 @mixin changeFontSize($mediaSize)
-
   @each $point in $points
     @media screen and (max-width: #{$point}px)
       font-size: map-get($mediaSize, $point)
+
+@mixin setFullGrid($gridName)
+  @each $point in $points
+    @if map-get($gridName,$point)
+      @if $point == 1920
+        @for $i from 1 through 12
+          .col-#{$i}
+            grid-column: span $i
+      @else
+        @media screen and (max-width: #{$point}px)
+          @for $i from 1 through 12
+            .col-#{map-get($gridName,$point)}-#{$i}
+              grid-column: span $i
 
 @mixin response
   @media screen and (max-width: $size)

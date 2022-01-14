@@ -10,8 +10,7 @@
   background: none
   background-color: $whiteColor
   border-color: $whiteColor
-  font-weight: 700
-
+  transition: ease-out 0.5s
   &:hover
     text-decoration: none
 .btn--black
@@ -30,6 +29,21 @@
   &:hover
     background-color: $blackColor
     border-color: $blackColor
+
+.btn--pink
+  background: linear-gradient(90deg, $pinkColor 0%, rgba(255, 154, 160, 0.9) 100%,)
+  box-shadow: $pinkShadow
+  border-color: $pinkColor
+  color: $whiteColor
+.btn--violet
+  background-color: $violetColor
+  border-color: $violetColor
+  box-shadow: $violetShadow
+  color: $whiteColor
+
+  &:hover
+    background-color: $pinkColor
+    border-color: $pinkColor
 /*pagination page start*/
 
 .pagination

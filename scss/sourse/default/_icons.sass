@@ -1,19 +1,31 @@
 .logout-ico
   @include icoEl(30px, 30px, "../images/icons/logout-white.svg")
+.logout-ico--color
+  @include icoEl(30px, 30px, "../images/icons/logout-black.svg")
 .login-ico
   @include icoEl(30px, 30px, "../images/icons/login-white.svg")
+.login-ico--color
+  @include icoEl(30px, 30px, "../images/icons/login-black.svg")
 
 .loop-ico
   @include icoEl(30px, 30px, "../images/icons/loop-white.svg")
+.loop-ico--color
+  @include icoEl(30px, 30px, "../images/icons/loop-black.svg")
 
 .basket-ico
   @include icoEl(30px, 30px, "../images/icons/basket-white.svg")
+.basket-ico--color
+  @include icoEl(30px, 30px, "../images/icons/basket-black.svg")
 
 .phone-ico
   @include icoEl(30px, 30px, "../images/icons/phone-white.svg")
+.phone-ico--color
+  @include icoEl(30px, 30px, "../images/icons/phone-black.svg")
 
 .mail-ico
   @include icoEl(30px, 30px, "../images/icons/mail-white.svg")
+.mail-ico--color
+  @include icoEl(30px, 30px, "../images/icons/mail-black.svg")
 
 .calendar-ico
   @include icoEl(30px, 30px, "../images/icons/calendar-black.svg")
@@ -32,10 +44,19 @@
 
 .avatar-ico
   @include icoEl(30px, 30px, "../images/icons/avatar-black.svg")
+
 .view-ico
   @include icoEl(30px, 30px, "../images/icons/view-black.svg")
 
-.password-ico
-  @include icoEl(30px, 30px, "../images/icons/password-gray.svg")
-.password-hide-ico
-  @include icoEl(30px, 30px, "../images/icons/password-hide-gray.svg")
+.view-ico[data-visibility="true"]
+  @include icoEl(30px, 30px, "../images/icons/unview-black.svg")
+
+.trash-ico
+  @include icoEl(30px, 30px, "../images/icons/trash-blue.svg")
+  &:hover
+    background-image: url("../images/icons/trash-pink.svg")
+
+.edit-ico
+  @include icoEl(27px, 27px, "../images/icons/edit-blue.svg")
+  &:hover
+    background-image: url("../images/icons/edit-pink.svg")

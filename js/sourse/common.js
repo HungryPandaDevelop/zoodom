@@ -6,5 +6,6 @@
  // @prepros-append common-parts/rating-comments.js
  // @prepros-append common-parts/cabinet-edit.js
  // @prepros-append common-parts/password-edit.js
+ // @prepros-append common-parts/temp.js
 
 

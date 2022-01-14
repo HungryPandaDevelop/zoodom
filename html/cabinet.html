@@ -50,7 +50,7 @@
             <div class="main-full">
               <h2>Заказать звонок</h2>
             </div> 
-                <form class="form form-grid">
+                <form class="form main-grid">
                   <input class="input-decorate form--col__full" type="text" placeholder="Фио">
                   <input class="phone-mask input-decorate form--col__full" type="text" placeholder="+7 (___) ___ - __ - __">
                   <input class="input-decorate check-mail form--col__full" type="email" placeholder="Email">
@@ -69,7 +69,7 @@
             <div class="main-full">
               <h2>Поиск по сайту</h2>
             </div>
-                <form class="form form-grid">
+                <form class="form main-grid">
                   <input class="input-decorate form--col__full search-field" type="text" placeholder="Введите поисковой запрос ...">
                   <div class="form-btn-container Поиск">
                     <input class="btn btn-send btn--black" type="submit">
@@ -126,23 +126,23 @@
     <!-- header start-->
     <header class="header-black">
       <div class="main-grid headline headline--black">
-        <div class="hamburger-container vertical-align"> <a class="hamburger-btn element-btn" href="#" data-element="0"></a></div>
-        <div class="logo-container vertical-align"> <a class="logo" href="#"> <img src="../images/logo.svg" alt=""></a></div>
-        <div class="sigin-container vertical-align"> 
-              <div class="sigin-body"><a href="#">
-                  <div class="login-ico"></div><span>Войти</span></a><span>/</span><a href="#">Регистрация</a>
+        <div class="hamburger-container vertical-align col-1"><a class="hamburger-btn element-btn" href="#" data-element="0"></a></div>
+        <div class="logo-container vertical-align col-2"><a class="logo" href="#"> <img src="../images/logo.svg" alt=""></a></div>
+        <div class="sigin-container vertical-align col-3">
+              <div class="sigin-body"><a href="#"> <i class="img-cover"> <img src="../images/temp/avatar-1.jpg" alt=""></i><em>Loren Smith</em></a><span>/</span><a href="#">
+                  <div class="logout-ico--color"></div><span>Выйти</span></a>
               </div>
         </div>
-        <div class="city-container vertical-align"> 
+        <div class="city-container vertical-align col-2">
           <div class="city-body"><em>Ваш Город: </em><a href="#"> Москва</a></div>
         </div>
-        <div class="controls-container vertical-align">
-          <div class="controls-body"><a class="element-btn loop-ico" href="#" data-element="2"></a><a class="basket-ico" href="#"></a></div>
+        <div class="controls-container vertical-align col-5">
+          <div class="controls-body"><a class="element-btn loop-ico--color" href="#" data-element="2"></a><a class="basket-ico--color" href="#"></a></div>
         </div>
         <hr>
       </div>
       <div class="main-grid headerline">
-        <nav class="nav">
+        <nav class="nav col-5">
           <ul>
             <li><a href="#">О нас</a></li>
             <li><a href="#">Каталог</a></li>
@@ -151,40 +151,75 @@
             <li><a href="#">Новости</a></li>
           </ul>
         </nav>
-        <div class="controls-container vertical-align">
-          <div class="controls-body"><a class="btn btn--green element-btn" href="#" data-element="1">Заказать звонок</a><a class="phone-ico" href="#"></a><a class="mail-ico" href="#"></a></div>
+        <div class="controls-container vertical-align col-7">
+          <div class="controls-body"><a class="btn btn--green element-btn" href="#" data-element="1">Заказать звонок</a><a class="phone-ico--color" href="#"></a><a class="mail-ico--color" href="#"></a></div>
         </div>
       </div>
     </header>
     <div class="stub"></div>
     <!-- header end-->
     <!-- header end-->
-        <div class="main-full">
-          <div class="breadcrumbs"><a href="#">Главная</a><span>/</span><a href="#">Категория</a><span>/</span><span>Просто страница</span></div>
+    <!--+roofContent("Личный профиль")-->
+    <div class="roofstub"></div>
+    <div class="page main-grid cabinet">
+      <div class="cabinet-sidebar col-3">
+        <div class="cabinet__user">
+          <div class="user-img"><span><img src="../images/icons/avatar-black.svg" alt=""></span></div>
+          <div class="user-name">Новый пользователь</div>
+          <div class="user-type">Питомник</div>
         </div>
-        <div class="content">
-          <div class="main-full">
-            <h1>Просто страница</h1>
+        <div class="cabinet-nav">
+          <h3>
+            <nav class="ln">
+              <li> <a class="active" href="#">Личный профиль</a></li>
+              <li> <a href="#">Основные данные ?</a></li>
+              <li> <a href="#">Объявления</a></li>
+            </nav>
+          </h3>
+        </div>
+      </div>
+      <div class="cabinet-delimetr col-1">
+        <hr>
+      </div>
+      <div class="cabinet-content col-6">
+        <h1>Личный профиль</h1>
+        <div class="cabinet-line">
+          <div class="cabinet-num">1.</div>
+          <div class="cabinet-label">Ваш логин</div>
+          <div class="cabinet-field">
+                <form class="form main-grid">
+                  <input class="input-decorate col-12 require" type="text" placeholder="Логин">
+                </form>
           </div>
-          <div class="page main-full">
-            <h3>Создать</h3>
-                <form class="form form-grid">
-                  <input class="input-decorate form--col__full require" type="text" placeholder="Заголовок">
-                  <input class="input-decorate form--col__full require" type="text" placeholder="Содержание">
-                  <div class="form-btn-container Добавить">
-                    <input class="btn btn--black btn-send" type="submit">
+        </div>
+        <div class="cabinet-line">
+          <div class="cabinet-num">2.</div>
+          <div class="cabinet-label">Тукущий пароль</div>
+          <div class="cabinet-field">
+                <form class="form main-grid">
+                  <div class="password-field col-12 require">
+                    <input class="input-decorate" type="password" placeholder="Пароль"><i class="view-ico" data-visibility="false"></i>
                   </div>
                 </form>
-            <h3>Список</h3>
-            <div class="user-item">
-              <h2>Lor</h2>
-              <div> 
-                <div class="btn btn--black">Редактировать</div>
-                <div class="btn btn--green user-item--delete">Удалить</div>
-              </div>
-            </div>
           </div>
         </div>
+        <div class="cabinet-line">
+          <div class="cabinet-num">3.</div>
+          <div class="cabinet-label">Контактные данные</div>
+          <div class="cabinet-field">
+                <form class="form main-grid">
+                  <input class="input-decorate col-12 require" type="text" placeholder="Фио">
+                  <input class="phone-mask input-decorate col-12 require" type="text" placeholder="+7 (___) ___ - __ - __">
+                  <input class="input-decorate check-mail col-12" type="email" placeholder="Email">
+                  <input class="input-decorate col-12 require" type="text" placeholder="whatsapp">
+                  <div class="form-btn-container col-12">
+                    <input class="btn btn-send btn--black" type="submit" value="Сохранить">
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- slider thumbnails end-->
     <!-- footer start -->
     <div class="stub-footer"></div>
